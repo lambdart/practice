@@ -9,6 +9,7 @@
   - https://www.hackerrank.com/challenges/fp-list-replication/problem
 
 * Problem
+
   Given a list, repeat each element in the list  amount of times. The
   input and output portions will be handled automatically by the
   grader. You need to write a function with the recommended method
@@ -62,10 +63,9 @@
    4
    #+END_SRC
 
-
 * Recommended Method Signature
 
-  Number Of Parameters: 2
-  Parameters: [number of times to replicate elements, list]
-  Returns: List or Vector
+  - Number Of Parameters: 2
+  - Parameters: [number of times to replicate elements, list]
+  - Returns: List or Vector
 
