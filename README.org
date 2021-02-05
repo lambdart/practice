@@ -37,6 +37,7 @@
    | Easy       | Two-Fer          |      |
    | Easy       | Reserve String   |      |
    | Easy       | List Replication |      |
+   | Easy       | List Length      |      |
 
 * Sources
 
