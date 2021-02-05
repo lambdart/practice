@@ -1,0 +1,54 @@
+#+AUTHOR: lambdart
+#+EMAIL: lambdart@protonmail.com
+#+KEYWORDS: programming language exercises practice
+#+LANGUAGE: en
+#+PROPERTY: header-args :tangle no
+
+* Overview
+
+  This repository it's just a place to save
+  solved exercises from diverse sources - everything
+  is organized by directory and the exercise instruction,
+  origin and difficulty will be displayed at its README.
+
+  You can checkout the list of solved exercises in the *Solved* and
+  quickly jump to the solution folder.
+
+  My focus right now is functional programming languages with the
+  following order of priority:
+
+  1. Clojure
+  2. ClojureScript
+  3. Erlang
+  4. Elixir
+  5. Common Lisp
+  6. OCaml
+  7. Scheme
+
+* Solved
+
+  Here is the list of solved problems so far:
+
+** Clojure
+
+   1. Hello World
+   2. Two-Fer
+   3. Reserve String
+
+* Sources
+
+  - https://exercism.io
+  - https://www.hackerrank.com
+
+* Future
+
+  - Common Lisp
+  - Elixir
+
+* References
+
+  - https://programmingzen.com/15-sites-for-programming-exercises
+
+* EOF
+
+
