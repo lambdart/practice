@@ -99,4 +99,6 @@ GTAGS
 .exercism
 
 # lein
+.lein*
+target
 project.clj
