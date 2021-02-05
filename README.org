@@ -27,13 +27,16 @@
 
 * Solved
 
-  Here is the list of solved problems so far:
+  Here is the list of solved problems so far divided by Programming
+  Language:
 
 ** Clojure
 
-   1. Hello World
-   2. Two-Fer
-   3. Reserve String
+   | Difficulty | Title            | Link |
+   | Easy       | Hello-Word       |      |
+   | Easy       | Two-Fer          |      |
+   | Easy       | Reserve String   |      |
+   | Easy       | List Replication |      |
 
 * Sources
 
