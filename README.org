@@ -11,38 +11,34 @@
   is organized by directory and the exercise instruction,
   origin and difficulty will be displayed at its README.
 
-  You can checkout the list of solved exercises in the *Solved* and
-  quickly jump to the solution folder.
+  You can checkout the list of solved exercises in the *Solved*
+  section and quickly jump to the solution (source code).
 
   My focus right now is functional programming languages with the
   following order of priority:
 
   1. Clojure
   2. ClojureScript
-  3. Erlang
-  4. Elixir
-  5. Common Lisp
-  6. OCaml
-  7. Scheme
+  3. Elixir/Erlang
+  4. Common Lisp
+  5. OCaml
+  6. Scheme
 
 * Solved
 
-  Here is the list of solved problems so far divided by Programming
-  Language:
+  Here is the list of solved problems so far:
 
-** Clojure
-
-   | Difficulty | Title            | Link |
-   | Easy       | Hello-Word       |      |
-   | Easy       | Two-Fer          |      |
-   | Easy       | Reserve String   |      |
-   | Easy       | List Replication |      |
-   | Easy       | List Length      |      |
+  | Difficulty | Title            | Language | Solution       |
+  | Easy       | Hello-Word       | Clojure  | [[file:./clojure/hello-world/src/hello-world.clj][hello-word.clj]] |
+  | Easy       | Two-Fer          | Clojure  |                |
+  | Easy       | Reserve String   | Clojure  |                |
+  | Easy       | List Replication | Clojure  |                |
+  | Easy       | List Length      | Clojure  |                |
 
 * Sources
 
-  - https://exercism.io
   - https://www.hackerrank.com
+  - https://exercism.io
 
 * Future
 
