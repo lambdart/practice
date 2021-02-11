@@ -1,6 +1,9 @@
 (ns lab
   (:require [clojure.string :as str]))
 
+(def i (atom 0)) ;; counter/index
+(def ans (atom 0.0)) ;; answer: accumulator
+
 (defn read-value []
   (map #(Integer/parseInt %) (-> (read-line) (str/split #" "))))
 
@@ -10,20 +13,16 @@
     (Math/sqrt (+ (Math/pow (- c a) 2)
                   (Math/pow (- d b) 2)))))
 
-(def i (atom 0))
-(def ans (atom 0.0))
-
 (defn solution []
-  (let [N (first (read-value))
-        POINTS (repeatedly N #(read-value))
-        LIMIT (- N 1)
-        FIRST (first POINTS)
-        LAST  (last POINTS)]
-    (while (< @i LIMIT)
-      (swap! ans #(+ % (calc-dist (nth POINTS @i)
-                                  (nth POINTS (inc @i)))))
+  (let [n (first (read-value))
+        limit (- N 1)
+        ps (repeatedly N #(read-value))
+        p1 (first ps)
+        pn (last ps)]
+    (while (< @i limit)
+      (swap! ans #(+ % (calc-dist (nth ps @i)
+                                  (nth ps (inc @i)))))
       (swap! i inc))
-    (println (+ @ans (calc-dist FIRST LAST)))))
+    (+ @ans (calc-dist p1 pn))))
 
-(solution)
-
+(println (solution))
