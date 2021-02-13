@@ -42,7 +42,6 @@
   | Easy       | Area-and-Volume      | Clojure  | [[file:./clojure/area-and-volume/src/area-and-volume.clj][area-and-volume.clj]]      |
   | Easy       | Polygon-Perimeter    | Clojure  | [[file:./clojure/polygon-perimeter/src/polygon-perimeter.clj][polygon-perimeter.clj]]    |
   | Easy       | Area-of-a-polygon    | Clojure  | [[file:./clojure/area-of-a-polygon/src/area-of-a-polygon.clj][area-of-a-polygon.clj]]    |
-  | Easy       | Area-of-a-polygon    | Clojure  | [[file:./clojure/area-of-a-polygon/src/area-of-a-polygon.clj][area-of-a-polygon.clj]]    |
   | Advanced   | Sierpinski-triangles | Clojure  | [[file:./clojure/sierpinski-triangles/src/sierpinski-triangles.clj][sierpinski-triangles.clj]] |
 
 * Sources
