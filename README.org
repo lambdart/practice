@@ -6,43 +6,17 @@
 
 * Overview
 
-  This repository it's just a place to save
-  solved exercises from diverse sources - everything
-  is organized by directory and the exercise instruction,
-  origin and difficulty will be displayed at its README.
+  This repository it's just a place to save my solution to
+  exercises from diverse sources.
 
-  You can checkout the list of solved exercises in the *Solved*
-  section and quickly jump to the solution (source code).
-
-  My focus right now is functional programming languages with the
-  following order of priority:
+  Languages of interest:
 
   1. Clojure
-  2. ClojureScript
-  3. Elixir/Erlang
-  4. Common Lisp
-  5. OCaml
-  6. Scheme
-
-* Solved
-
-  Here is the list of solved problems so far:
-
-  | Difficulty | Title                | Language | Solution                 |
-  | Easy       | Hello-Word           | Clojure  | [[file:./clojure/hello-world/src/hello_world.clj][hello-word.clj]]           |
-  | Easy       | Two-Fer              | Clojure  | [[file:./clojure/two-fer/src/two_fer.clj][two-fer.clj]]              |
-  | Easy       | Reserve String       | Clojure  | [[file:./clojure/reverse-string/src/reverse_string.clj][reverse-string.clj]]       |
-  | Easy       | Filter-Array         | Clojure  | [[file:./clojure/filter-array/src/filter-array.clj][filter-array.clj]]         |
-  | Easy       | Filter-Positions     | Clojure  | [[file:./clojure/filter-pos/src/filter-pos.clj][filter-pos.clj]]           |
-  | Easy       | Array-of-N-Elements  | Clojure  | [[file:./clojure/array-of-N-elements/src/array-of-N-elements.clj][array-of-N-elements.clj]]  |
-  | Easy       | List Replication     | Clojure  | [[file:./clojure/list-replication/src/list-replication.clj][list-replication.clj]]     |
-  | Easy       | List Length          | Clojure  | [[file:./clojure/list-length/src/list-length.clj][list-length.clj]]          |
-  | Easy       | Update-list          | Clojure  | [[file:./clojure/update-list/src/update-list.clj][update-list.clj]]          |
-  | Easy       | Func-or-not          | Clojure  | [[file:./clojure/func-or-not/src/func-or-not.clj][func-or-not.clj]]          |
-  | Easy       | Area-and-Volume      | Clojure  | [[file:./clojure/area-and-volume/src/area-and-volume.clj][area-and-volume.clj]]      |
-  | Easy       | Polygon-Perimeter    | Clojure  | [[file:./clojure/polygon-perimeter/src/polygon-perimeter.clj][polygon-perimeter.clj]]    |
-  | Easy       | Area-of-a-polygon    | Clojure  | [[file:./clojure/area-of-a-polygon/src/area-of-a-polygon.clj][area-of-a-polygon.clj]]    |
-  | Advanced   | Sierpinski-triangles | Clojure  | [[file:./clojure/sierpinski-triangles/src/sierpinski-triangles.clj][sierpinski-triangles.clj]] |
+  2. Common Lisp
+  3. Scheme
+  4. OCaml
+  5. Lfe
+  6. Erlang
 
 * Sources
 
