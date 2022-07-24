@@ -1,4 +1,4 @@
-(ns lab)
+(ns solution.sierpinski-triangles)
 
 (defn read-value []
   (Integer/parseInt (read-line)))
@@ -15,5 +15,3 @@
     (doseq [x (range 63)]
       (print (if (sierpinski (- 6 n) y x) "1" "_")))
     (newline)))
-
-(solution (read-value))
