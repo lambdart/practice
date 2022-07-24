@@ -102,3 +102,10 @@ GTAGS
 .lein*
 target
 project.clj
+
+# dirs
+.backup
+
+# clojure
+.m2
+.cpcache
