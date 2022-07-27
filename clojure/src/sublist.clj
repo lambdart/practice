@@ -1,4 +1,4 @@
-(ns sublist)
+(ns solution.sublist)
 
 ;; Determine the relation between list1 and list2 and return
 ;; the relation as a Clojure keyword. The function classify should either

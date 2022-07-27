@@ -1,4 +1,4 @@
-(ns run-length-encoding
+(ns solution.run-length-encoding
   (:require [clojure.string :as str :refer [join blank?]]
             [criterium.core :refer [quick-bench with-progress-reporting]]))
 
