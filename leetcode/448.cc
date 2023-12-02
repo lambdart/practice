@@ -30,20 +30,3 @@ static const int _ = []()
   cout.tie(0);
   return 0;
 }();
-
-int main (void)
-{
-    Solution s;
-
-    vector<int> nums1 = {4,3,2,7,8,2,3,1};
-    vector<int> nums0 = {1};
-
-    vector<int> ans = s.findDisappearedNumbers(nums0);
-
-    for(const auto& v: ans) {
-        cout << v << " ";
-    }
-    cout << endl;
-
-    return 0;
-}
