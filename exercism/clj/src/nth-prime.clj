@@ -31,3 +31,16 @@
   (case n
     0 (throw (IllegalArgumentException. ""))
     (peek (gen-primes n))))
+
+(defn sieve-of-eratosthenes [n]
+  (let [arr (vec (repeat n 0))]
+    (loop [j 3
+           `ps arr]
+      (if (> j n)
+        ps
+        (recur (+ j 2)
+               (loop [i 3
+                      ts ps]
+                 (if (> (* i j) n)
+                   ts
+                   (recur (+ i 2) (assoc ts (* i j) 1)))))))))

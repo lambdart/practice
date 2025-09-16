@@ -1,12 +1,12 @@
-(ns solution.run-length-encoding
+(ns run-length-encoding
   (:require [clojure.string :as str :refer [join blank?]]
             [criterium.core :refer [quick-bench with-progress-reporting]]))
 
 (defn run-length-encode [s]
-  (apply str
-         (remove #{1}
-                 (mapcat (juxt count first)
-                         (partition-by identity s)))))
+  ;; (apply str
+  ;;        (remove #{1}
+  (map (juxt count first)
+       (partition-by identity s)))
 
 (defn run-length-decode
   [s]

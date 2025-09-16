@@ -1,0 +1,224 @@
+;; (ns temp)
+
+;; (defn user-generator []
+;;   {:uuid (java.util.UUID/randomUUID)
+;;    :color (nth '(:red :green :blue) (rand-int 3))
+;;    :hight (+ 60 (rand-int 13))})
+
+
+;; (def users-average-color
+;;   (reduce (fn [average-color user]
+;;           (assoc average-color (:color user)
+;;                  (conj (get average-color (:color user)) (:hight user))))
+
+;;          {:red ()
+;;           :blue ()
+;;           :green ()}
+;;          (take 100 (repeatedly user-generator))))
+
+;; (map (fn [x]
+;;        (:red users-average-color)
+;;        (float (/ (apply + (:red users-average-color)) (count (get users-average-color :red))))
+;; s
+
+;; (loop [users (take 100 (repeatedly user-generator))
+;;        average-color {:red 0
+;;                       :blue 0
+;;                       :green 0}]
+;;   (if (empty? users)
+;;     average-color
+;;     (recur
+;;      (case (:color (first users))
+
+;;        (case (:color (first users))
+;;          :red (assoc average-color ())
+;;          :green
+;;          :blue
+
+
+;;          (let [color (:color x)]
+;;          {:uuid uuid
+;;           :color color
+;;           :hight (* 2.54 hight)}))
+;;      (take 100 (repeatedly user-generator)))
+
+
+;; ((red number) (0)
+;;  (green number) (1)
+;;  (blue number) (3))
+                                        ;h;
+;; (defn BitmapHoles [matrix]
+
+;;   (BitmapHoles [[0 1 1 1 1]
+;;                 [0 1 1 0 1]
+;;                 [0 0 0 1 1]
+;;                 [1 1 1 1 0]])
+
+
+(ns bitmap-holes
+  (:require [clojure.string :as str]))
+
+(defn parse-int [s]
+  (Integer. (re-find  #"\d+" s )))
+
+(defn row [strRow]
+  (->>
+   (str/split strRow #"")
+   (map parse-int)
+   vec))
+
+(defn abs [x]
+  (* x (if (< x 0) -1 1)))
+
+(defn adjacent? [a b]
+  (and (<= (abs (- (first a)
+                   (first b))) 1)
+   (<= (abs (- (second a)
+               (second b))) 1)))
+
+;; (defn ups [matrix index]
+;;   (for []
+;;   )
+
+;; (mapv row strArr)
+
+(defn BitmapHoles [strArr]
+  (let [matrix (mapv row strArr)
+        indexs (apply vector (for [i (range (count matrix))
+                                   j (range (count (nth matrix 0)))]
+                               [i j]))
+        zeros (reduce (fn [indexs index]
+                        (if (zero? (get-in matrix index))
+                          (conj indexs index)
+                          indexs))
+                      []
+                      indexs)]
+    (loop [holes 0
+           zeros zeros]
+      (if (= (count zeros) 1)
+        holes
+        (recur (if (adjacent? (first zeros)
+                              (second zeros))
+                 (inc holes)
+                 holes)
+               (rest zeros))))))
+
+;; (update-in matrix index (fn [_] 1))))
+(BitmapHoles (into-array ["01111", "01101", "00011", "11110"]))
+
+1 0 1 1
+0 0 1 0
+
+;; (reduce (fn [holes index]
+;;           (if (nth) (deepSearch(matrix, index))
+
+;;     zeros (loop [indexs indexs
+;;                  zeros []]
+;;             (if (empty? indexs)
+;;               zeros
+;;               (let [index (first indexs)]
+;;                 (recur (rest indexs)
+;;                        (if (= (nth (nth matrix (first index))
+;;                                    (second index)) 0)
+;;                          (conj zeros index)
+;;                          zeros)))))]
+;; zeros))
+
+
+;; (loop [i 0
+;;        holes 0]
+;;   (if (>= i (count zeros))
+;;     holes
+;;     (recur (inc i)
+;;            (if (false? (loop [j (+ i 1)
+;;                               checker false]
+;;                          (if (>= j (count zeros))
+;;                            checker
+;;                            (recur (inc j)
+;;                                   ()
+;;                                   (inc holes)
+;;                                   holes)))))))
+
+
+;; if (index[j][0] === index[i][0] + 1 &&
+;;     index[j][1] === index[i][1] ||
+;;     index[j][0] === index[i][0] &&
+;;     index[j][1] === index[i][1] + 1) {
+
+;; zeros))
+;; (loop [zeros zeros
+;;        holes []]
+;;   (if (= (count zeros) 1)
+;;     holes
+;;   (recur (rest zeros)
+;;          (if (not (adjacent? (first zeros)
+;;                              (second zeros)))
+;;            (conj holes (first zeros))
+;;            holes))))))
+
+
+;; 0 1 1 1 1
+;; 0 1 1 0 1
+;; 0 0 0 1 1
+;; 1 1 1 1 0
+
+[0 0]: 0
+[0 1]: 0
+[0 2]: 0
+
+
+
+
+
+;; 1 0 1 1
+;; 0 0 1 0
+
+;; (reduce (fn [x y]
+;;           (if (adjacent? (last x) y)
+;;             x
+;;             (conj x y)))
+;;         [[0 0]]
+;;         [[0 0] [1 0] [1 3] [2 0] [2 1] [2 2] [3 4]])
+
+
+;;        holes 0]
+;;   (if (empty? zeros)
+;;     holes
+;;     (recur ()
+
+;; 0
+;; [[0 0] [1 0] [1 3] [2 0] [2 1] [2 2] [3 4]])
+
+;; (loop [zeros zeros
+;;        holes 0]
+;;   (if (empty? zeros)
+;;     holes
+;;     (loop [])
+;;     (recur (rest zeros)
+
+
+;; (doseq [row ["01111", "01101", "00011", "11110"]]
+;; (println row))
+
+;; (loop [i 0]
+;;   (loop [j 0]
+;;     (if (> j
+;;     (recur
+;;       (recur (inc r)))))
+
+;; (if (= (nth (nth matrix i) j) 0) (conj index [i j]
+
+;;         (conj (= (nth (nth matrix i) j) 0)
+
+;;     matrix))
+
+
+(defn StringPeriods [strInput]
+  (let [strSize (count strInput)]
+    (loop [end 1]
+      (if (> end (/ strSize 2))
+        -1
+        (let [n (/ strSize end)]
+          (if (= strInput (apply str (repeat n (subs strInput 0 end))))
+            (subs strInput 0 end)
+            (recur (inc end))))))))

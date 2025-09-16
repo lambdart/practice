@@ -1,28 +1,23 @@
-{:paths ["src/" "test/"],
-
+{:paths ["src" "test"],
  :deps
  {org.clojure/clojure {:mvn/version "1.10.3"},
   org.clojure/tools.namespace {:mvn/version "1.2.0"},
   org.clojure/tools.trace {:mvn/version "0.7.11"},
-  criterium/criterium {:mvn/version "0.4.6"}
-  ;; end of deps
-  },
-
+  criterium/criterium {:mvn/version "0.4.6"}},
  :aliases
  {
   ;; Development environment
   ;; Production environment
   ;; Testing environment
-
   ;; Test runner
-  :run/test {:extra-deps
-             {clj-async-test/clj-async-test {:mvn/version "0.0.5"},
-              io.github.cognitect-labs/test-runner {:git/tag "v0.5.0" :git/sha "b3fd0d2"}}
+  :run/test {:extra-paths ["test"]
+             :extra-deps {io.github.cognitect-labs/test-runner
+                          {:git/tag "v0.5.1" :git/sha "dfb30dd"}}
              :main-opts ["-m" "cognitect.test-runner"]
              :exec-fn cognitect.test-runner.api/test},
-
   ;; Native REPL server
-  :run/repl-server {:exec-fn clojure.core.server/start-server,
+  :run/repl-server {:extra-paths ["test"]
+                    :exec-fn clojure.core.server/start-server,
                     :exec-args
                     {:name "repl-server",
                      :address "0.0.0.0",
@@ -31,21 +26,15 @@
                      :bind-err true,
                      :server-daemon false,
                      :client-daemon false}},
-
   ;; Native REPL server using socket
   :run/repl-socket
-  {:jvm-opts
-   ["-Dclojure.server.repl={:port,50505,:accept,clojure.core.server/repl}"]}
-
+  {:jvm-opts ["-Dclojure.server.repl={:port,50505,:accept,clojure.core.server/repl}"]}
   ;; end of aliases
   },
-
  ;; Remote Repositories
  :mvn/repos {"central" {:url "https://repo1.maven.org/maven2/"}
              "clojars" {:url "https://repo.clojars.org/"}}
-
  ;; Local Repositories
  :mvn/local-repo ".m2/repository"
-
  ;; end
  }
