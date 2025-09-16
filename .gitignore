@@ -1,6 +1,9 @@
 # Cmake build folder
 build
 
+# C++ debugging facility
+dbg.h
+
 # Compiled Object files
 *.slo
 *.lo
