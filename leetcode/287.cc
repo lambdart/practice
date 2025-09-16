@@ -1,7 +1,7 @@
 // 287. Find the Duplicate Number
 
-#include <iostream>
 #include <vector>
+#include <iostream>
 #include <algorithm>
 
 using namespace std;

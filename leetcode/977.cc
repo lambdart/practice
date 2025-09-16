@@ -44,3 +44,16 @@ static const int _ = []()
     cout.tie(0);
     return 0;
 }();
+
+int main(int argc, char *argv[])
+{
+    Solution s;
+    std::vector<int> nums {-4,-1,0,3,10};
+
+    for(const auto& v: s.sortedSquares(nums))
+        cout << v << " ";
+    cout << endl;
+
+    return 0;
+}
+

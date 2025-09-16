@@ -4,6 +4,8 @@
 #include <vector>
 #include <unordered_map>
 
+#include "dbg.h"
+
 using namespace std;
 
 class Solution {
@@ -51,3 +53,16 @@ static const int _ = []()
     cout.tie(0);
     return 0;
 }();
+
+int main(int argc, char *argv[])
+{
+    Solution s;
+
+    string a = "babaed";
+    string b = "bae";
+
+    dbg(s.findAnagrams(a, b));
+
+    return 0;
+}
+

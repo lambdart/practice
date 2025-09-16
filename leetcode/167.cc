@@ -7,49 +7,36 @@ using namespace std;
 
 class Solution {
 public:
-    vector<int> twoSum(vector<int>& A, int T) {
-        vector<int> ans(2);
-
-        int n = A.size();
+    vector<int> twoSum(vector<int> &A, int target) {
         int L = 0;
-        int R = n - 1;
+        int R = A.size() - 1;
+        int sum = 0;
 
-        int sum = A[L] + A[R];
-
-        while (sum != T && L < n && R > 0)
-        {
-            if (sum > T)
-                R = R - 1;
-            else
-                L = L + 1;
-            // update the sum
-            sum = A[L] + A[R];
-
+        while (L < R) {
+          sum = A[L] + A[R];
+          // update the sum
+          if (sum == target) return {L + 1, R + 1};
+          if (sum > target) --R;
+          else ++L;
         }
-        ans[0] = L + 1;
-        ans[1] = R + 1;
-
-        return ans;
+        return {L + 1, R + 1};
     }
 };
-
 
 int main (void)
 {
     Solution solution;
 
-    //vector<int> A = {2,7,11,15}; // 9
+    vector<int> A = {2,7,11,15}; // 9
     //vector<int> A = {2,3,4};   // 6
     //vector<int> A = {-1,0};    // -1
 
-    auto ans = solution.twoSum(A, -1);
+    auto ans = solution.twoSum(A, 9);
 
     for(const auto& v: ans)
         cout << v << " ";
-
     cout << endl;
 
     return 0;
 }
-
 

@@ -9,39 +9,27 @@ using namespace std;
 class Solution {
 public:
     static int maxProfit(vector<int>& prices) {
-
-        int buy = prices[0];
-        int ans = 0;
-
-        prices[0] = 0;
-
-        for (int i = 1; i < prices.size(); i++) {
-            if (buy > prices[i])
-            {
-                buy = prices[i];
-                prices[i] = 0;
-            }
-            else {
-                ans = max(ans, prices[i] - buy);
-            }
+      int l = 0, r = 1, ans = 0;
+      while (r < prices.size()) {
+        if (prices[r] < prices[l]) ++l;
+        else {
+          ans = max(ans, prices[r] - prices[l]);
+          ++r;
         }
-        return ans;
+      }
+      return ans;
     }
 };
 
 int main (void)
 {
+    // vector<int> prices = {7,1,5,3,6,4};
     // vector<int> prices = {2,1,2,1,0,1,2};
     // vector<int> prices = {7,3,2,6,5,0,3};
-    vector<int> prices = {1,2};
+    // vector<int> prices = {1,2,3};
+    vector<int> prices = {1};
 
-    int ret = Solution::maxProfit(prices);
-
-    // for (const auto& v : prices)
-    //     cout << v << " ";
-    // cout << "\n";
-
-    cout << ret << endl;
+    cout << Solution::maxProfit(prices) << endl;
 
     return 0;
 }
